@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
-import { InfobrasController } from "../controllers/integrations";
-import { ControllerResponse } from "../types/app";
+import { InfobrasController } from "../controllers/integrations/infobras.controller.js";
+import { ControllerResponse } from "../types/app.js";
 
 
 export class InfobrasRouter {
