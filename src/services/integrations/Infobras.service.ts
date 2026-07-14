@@ -81,21 +81,25 @@ export class InfobrasService {
 
         } catch (error) {
 
-            console.error(
-                "Service Error [Infobras findAll]:",
-                error
-            );
+           if (axios.isAxiosError(error)) {
+        console.error("========== INFOBRAS ERROR ==========");
+        console.error("Message:", error.message);
+        console.error("Status:", error.response?.status);
+        console.error("Headers:", error.response?.headers);
+        console.error("Data:", error.response?.data);
+    } else {
+        console.error(error);
+    }
 
-
-            return {
-                success: false,
-                code: 500,
-                error: {
-                    msg: "Error al recuperar obras de INFObras"
-                }
-            };
+    return {
+        success: false,
+        code: 500,
+        error: {
+            msg: "Error al recuperar obras de INFObras"
+        }
 
         }
+    }
 
     }
 
