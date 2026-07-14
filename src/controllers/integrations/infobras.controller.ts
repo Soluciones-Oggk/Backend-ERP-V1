@@ -1,5 +1,5 @@
 import { Request } from "express";
-import { InfobrasService } from "../../services/integrations/Infobras.service.js";
+import { InfobrasService } from "../../services/integrations/index.js";
 import { ControllerResponse } from "../../types/app.js";
 
 
