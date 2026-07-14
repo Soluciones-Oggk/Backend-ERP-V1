@@ -1,5 +1,5 @@
-import { AppServer } from "./app";
-import { envs } from "./config/envs";
+import { AppServer } from "./app.js";
+import { envs } from "./config/envs.js";
 
 export class Server {
 

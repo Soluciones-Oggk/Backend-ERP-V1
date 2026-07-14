@@ -1,2 +1,2 @@
 // interfaces/integrations/index.ts
-export * from './Infobras.interface';
+export * from './Infobras.interface.js';

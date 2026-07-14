@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { InfobrasRouter } from "../routes/infobras.router";
+import { InfobrasRouter } from "../routes/infobras.router.js";
 
 export class RootRouter {
 

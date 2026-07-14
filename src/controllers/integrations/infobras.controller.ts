@@ -1,6 +1,6 @@
 import { Request } from "express";
-import { InfobrasService } from "../../services/integrations";
-import { ControllerResponse } from "../../types/app";
+import { InfobrasService } from "../../services/integrations/Infobras.service.js";
+import { ControllerResponse } from "../../types/app.js";
 
 
 export class InfobrasController {

@@ -1,7 +1,7 @@
 import express, { type Express } from "express";
 import cors from "cors";
-import { RootRouter } from "./routes/RootRouter";
-import { envs } from "./config/envs";
+import { RootRouter } from "./routes/RootRouter.js";
+import { envs } from "./config/envs.js";
 
 export class AppServer {
 
