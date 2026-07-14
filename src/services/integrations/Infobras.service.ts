@@ -16,6 +16,13 @@ export class InfobrasService {
             const response = await axios.get(
                 this.url,
                 {
+                     headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://infobras.contraloria.gob.pe/",
+    "Origin": "https://infobras.contraloria.gob.pe"
+  },
+  
                     params: {
 
                         nombre: req.query.nombre ?? "",
