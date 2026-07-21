@@ -9,16 +9,19 @@ export class Server {
 
         const app = appServer.getApp();
 
-        app.listen(envs.PORT, () => {
+        app.listen(
+            envs.PORT,
+            "0.0.0.0",
+            () => {
 
-            console.clear();
+                console.log("==================================");
+                console.log("🚀 Backend ERP iniciado");
+                console.log(`🌐 http://localhost:${envs.PORT}`);
+                console.log(`📡 Puerto: ${envs.PORT}`);
+                console.log("==================================");
 
-            console.log("==================================");
-            console.log("🚀 Backend ERP iniciado");
-            console.log(`🌐 http://localhost:${envs.PORT}`);
-            console.log("==================================");
-
-        });
+            }
+        );
 
     }
 

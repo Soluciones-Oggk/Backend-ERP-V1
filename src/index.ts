@@ -1,7 +1,17 @@
 import "dotenv/config";
 
-import { AppServer } from "./app.js";
+import { Server } from "./server.js";
 
-const app = new AppServer();
+// Captura errores no controlados
+process.on("uncaughtException", (error) => {
+    console.error("❌ Error no controlado:");
+    console.error(error);
+});
 
-app.listen();
+process.on("unhandledRejection", (error) => {
+    console.error("❌ Promise rechazada:");
+    console.error(error);
+});
+
+// Iniciar servidor
+Server.start();
